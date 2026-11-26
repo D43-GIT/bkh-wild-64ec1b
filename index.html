@@ -1,18 +1,17 @@
 <!doctype html>
-<html lang="en-AU" data-brand="bkh">
+<html lang="en-AU" data-brand="plain">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#080808">
 <meta name="robots" content="noindex, nofollow">
 <title>Wild Modular Film Plan</title>
-<link rel="icon" href="bkh-wild-64ec1b-assets/icon.png">
+<link rel="icon" href="wm/icon.png">
 <style>
-@font-face{font-family:"Inter Tight";src:url(bkh-wild-64ec1b-assets/it400.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Inter Tight";src:url(bkh-wild-64ec1b-assets/it600.woff2) format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"Inter Tight";src:url(bkh-wild-64ec1b-assets/it700.woff2) format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"Clash Display";src:url(bkh-wild-64ec1b-assets/clash600.woff2) format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"BKH Copperplate";src:url(bkh-wild-64ec1b-assets/mark700.woff2) format("woff2");font-weight:700;font-display:block}
+@font-face{font-family:"Inter Tight";src:url(wm/it400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter Tight";src:url(wm/it600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Inter Tight";src:url(wm/it700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Clash Display";src:url(wm/clash600.woff2) format("woff2");font-weight:600;font-display:swap}
 :root{
   --ground:#080808; --e1:#0c0c0e; --e2:#121215; --e3:#17171b; --e4:#1d1d22; --e5:#232329;
   --line:#26262e; --line2:#33333d;
@@ -35,13 +34,11 @@ h3{font-size:24px}
 p{margin:0}
 .muted{color:var(--muted)}
 .gold-t{background:var(--molten);-webkit-background-clip:text;background-clip:text;color:transparent}
-.mark{font-family:"BKH Copperplate","Copperplate Gothic Bold",Copperplate,Georgia,serif;font-weight:700;letter-spacing:.06em;white-space:nowrap;background:var(--molten);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
 
 /* top bar */
 .top{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;padding:22px 0 10px;flex-wrap:wrap}
 .who{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap}
-.who .mark{font-size:clamp(17px, 1vw + 12px, 22px)}
-.who .x{color:var(--soft);font-size:17px}
+.who .who .x{color:var(--soft);font-size:17px}
 .who .jph{font-weight:600;font-size:clamp(17px, .6vw + 14px, 20px);color:var(--bone);white-space:nowrap}
 .top .upd{font-size:16px;color:var(--soft)}
 
@@ -78,17 +75,11 @@ p{margin:0}
 .screen.tall{aspect-ratio:9/16;border-radius:22px;width:27%;min-width:92px;position:absolute;right:4%;bottom:0;z-index:2}
 .shot{position:absolute;inset:0;opacity:0;display:grid;place-items:center}
 .shot.on{opacity:1}
-.shot::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 72% 22%, rgba(255,226,170,.42), rgba(255,226,170,.12) 45%, rgba(255,226,170,0) 75%),linear-gradient(180deg,rgba(8,8,8,0) 45%,rgba(8,8,8,.62))}
-.shot svg{width:38%;height:auto;aspect-ratio:1;stroke:#fff3d6;stroke-width:.9;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.5;position:relative;z-index:1}
-.tall .shot svg{width:62%}
-.s1{background:linear-gradient(160deg,#2a1a10,#8a4a1e 55%,#e0a04a)}
-.s2{background:linear-gradient(160deg,#141b25,#3d5a73 58%,#c2b59a)}
-.s3{background:linear-gradient(160deg,#141518,#44403b 55%,#b08f62)}
-.s4{background:linear-gradient(170deg,#0c2431,#1f6f86 52%,#f0c27a)}
-.s5{background:linear-gradient(165deg,#10281b,#2f6b47 55%,#e8c870)}
+.shot::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 72% 22%, rgba(255,226,170,.16), rgba(255,226,170,.05) 45%, rgba(255,226,170,0) 75%),linear-gradient(180deg,rgba(8,8,8,.30) 0%,rgba(8,8,8,0) 30%,rgba(8,8,8,0) 55%,rgba(8,8,8,.66))}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .slow .shot,.calm .shot{transition:opacity 1600ms ease}
-.slow .shot svg{transition:transform 5200ms linear;transform:scale(1)}
-.slow .shot.on svg{transform:scale(1.14)}
+.slow .shot img{transition:transform 5200ms linear;transform:scale(1)}
+.slow .shot.on img{transform:scale(1.14)}
 .slate{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 12px;color:#fff;font-size:16px;font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.6)}
 .slate small{font-size:16px;font-weight:400;color:#f5e3a0;font-variant-numeric:tabular-nums;white-space:nowrap}
 .title{position:absolute;left:12px;top:10px;z-index:3;font-family:"Clash Display",sans-serif;font-weight:600;color:#f4ecdd;line-height:1.02;font-size:clamp(20px, 3.4vw, 34px);text-shadow:0 1px 14px rgba(0,0,0,.45)}
@@ -157,10 +148,8 @@ section{padding:64px 0 8px}
 
 /* cut */
 .strip{position:relative;background:var(--e2);border:1px solid var(--line);border-radius:var(--r);padding:18px 16px 14px;margin-bottom:14px;overflow:hidden}
-.ticks{display:flex;gap:2px;height:64px;border-radius:10px;overflow:hidden}
-.ticks i{flex:1 1 0;min-width:0;background:#8a4a1e}
-.ticks i:nth-child(5n+1){background:#c9932e}.ticks i:nth-child(5n+2){background:#3d5a73}.ticks i:nth-child(5n+3){background:#6b5a45}.ticks i:nth-child(5n+4){background:#1f6f86}.ticks i:nth-child(7n){background:#2f6b47}.ticks i:nth-child(11n){background:#e8c26a}
-.head{position:absolute;top:10px;bottom:44px;left:16px;width:3px;border-radius:3px;background:#fff;box-shadow:0 0 0 1px rgba(8,8,8,.5);animation:sweep 14s linear infinite}
+.ticks{display:flex;gap:3px;height:72px;border-radius:10px;overflow:hidden}
+.ticks img{flex:1 1 0;min-width:0;height:100%;object-fit:cover}
 @keyframes sweep{from{transform:translateX(0)}to{transform:translateX(var(--w,300px))}}
 .strip .cap{display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:16px;color:var(--soft)}
 .four{display:grid;gap:10px;grid-template-columns:1fr 1fr}
@@ -171,14 +160,17 @@ section{padding:64px 0 8px}
 /* series */
 .series{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
 .ep{appearance:none;cursor:pointer;background:var(--e2);border:1px solid var(--line);border-radius:16px;padding:14px 6px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;min-height:104px;min-width:0;transition:border-color 300ms ease, background-color 300ms ease}
-.ep .ico{width:30px;height:30px;color:var(--soft);transition:color 300ms ease}
+.ep img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;opacity:.7;transition:opacity 300ms ease}
 .ep b{font-size:16px;font-weight:600;line-height:1.2;text-align:center;overflow-wrap:anywhere}
 .ep small{font-size:16px;color:var(--soft)}
 .ep:hover{border-color:var(--line2);background:var(--e3)}
 .ep[aria-pressed="true"]{border-color:var(--brass);background:var(--e3);box-shadow:0 0 0 1px var(--brass) inset}
-.ep[aria-pressed="true"] .ico{color:var(--brass)}
-@media (max-width:620px){.series{grid-template-columns:repeat(2,1fr)}.ep:last-child{grid-column:1 / -1}.ep{flex-direction:row;justify-content:flex-start;min-height:60px;padding:10px 14px;gap:12px}.ep b{text-align:left}.ep small{display:none}}
-.epd{margin-top:12px;background:linear-gradient(180deg,var(--e3),var(--e2));border:1px solid rgba(232,200,112,.35);border-radius:var(--r);padding:22px;display:grid;gap:8px;min-height:132px}
+.ep[aria-pressed="true"] img{opacity:1}
+@media (max-width:620px){.series{grid-template-columns:repeat(2,1fr)}.ep:last-child{grid-column:1 / -1}.ep{flex-direction:row;justify-content:flex-start;min-height:60px;padding:8px 10px;gap:12px}.ep img{width:64px;flex:0 0 64px}.ep b{text-align:left}.ep small{display:none}}
+.epd{margin-top:12px;background:linear-gradient(180deg,var(--e3),var(--e2));border:1px solid rgba(232,200,112,.35);border-radius:var(--r);padding:14px;display:grid;gap:16px;align-items:center}
+.epd img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.epd .tx{display:grid;gap:8px;padding:6px 8px 8px}
+@media (min-width:760px){.epd{grid-template-columns:1.15fr 1fr;padding:16px}}
 .epd .k{color:var(--brass);font-size:17px}
 .epd h3{font-size:26px}
 .epd p{color:var(--muted)}
@@ -264,16 +256,22 @@ section{padding:64px 0 8px}
 .how{display:grid;gap:12px;margin:0;padding:0}
 @media (min-width:760px){.how{grid-template-columns:repeat(4,1fr)}}
 .how li{list-style:none;background:var(--e2);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:10px}
+.how .st{color:var(--brass);font-size:16px;font-weight:600}
 .how .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(232,200,112,.1);border:1px solid rgba(232,200,112,.4);color:var(--brass)}
 .how b{font-size:20px;font-family:"Clash Display",sans-serif;font-weight:600}
 .how p{color:var(--muted);font-size:17px;line-height:1.4}
 
 /* proof */
-.proof{background:var(--e2);border:1px solid var(--line);border-radius:24px;padding:28px 20px;display:grid;gap:22px}
-@media (min-width:900px){.proof{grid-template-columns:1.2fr .8fr;align-items:center;padding:40px 44px}}
-.names{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.names span{border:1px solid var(--line2);background:var(--e3);border-radius:999px;padding:10px 16px;font-size:18px;font-weight:600}
-.proof .side{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.proof{background:var(--e2);border:1px solid var(--line);border-radius:24px;padding:24px 16px;display:grid;gap:22px}
+@media (min-width:900px){.proof{padding:40px 44px}}
+.proof .head2{display:flex;flex-wrap:wrap;gap:18px 32px;align-items:flex-end;justify-content:space-between}
+.proof .side{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.gallery{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin:0;padding:0}
+@media (min-width:760px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:359px){.gallery{grid-template-columns:1fr}}
+.gallery figure{margin:0;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line2);background:var(--e3)}
+.gallery img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;font-size:16px;font-weight:600;color:#fff;background:linear-gradient(180deg,rgba(8,8,8,0),rgba(8,8,8,.72));text-shadow:0 1px 8px rgba(0,0,0,.5)}
 
 .good{display:grid;gap:10px;margin-top:0;padding:0;list-style:none}
 @media (min-width:760px){.good{grid-template-columns:1fr 1fr}}
@@ -291,13 +289,21 @@ section{padding:64px 0 8px}
 .need .ico{color:var(--brass);margin-top:3px;width:20px;height:20px}
 .reply{margin-top:20px;background:var(--e1);border:1px solid var(--line2);border-radius:16px;padding:16px 18px;font-size:18px;line-height:1.5;white-space:pre-wrap;color:var(--bone);overflow-wrap:anywhere}
 .cta .btns{margin-top:18px}
+.cta .full{grid-column:1 / -1}
 @media (min-width:900px){.cta{padding:44px 48px}.cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.reply{margin-top:0}}
 
-footer{padding:56px 16px calc(40px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-footer .mark{font-size:20px}
-footer .jph{font-weight:600;font-size:18px}
+footer{padding:48px 16px calc(40px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
 footer p{font-size:16px;color:var(--soft)}
-footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line2);overflow-wrap:anywhere}
+footer .contact{width:100%;max-width:640px}
+.contact{background:var(--e1);border:1px solid var(--line2);border-radius:20px;padding:20px;display:grid;gap:14px;text-align:left}
+.contact .who2 b{display:block;font-family:"Clash Display",sans-serif;font-weight:600;font-size:26px;line-height:1.15}
+.contact .who2 span{color:var(--muted);font-size:17px}
+.cbtns{display:grid;gap:10px;grid-template-columns:1fr}
+@media (min-width:560px){.cbtns{grid-template-columns:1fr 1fr}}
+.cbtns .btn{width:100%;justify-content:flex-start;font-size:17px;padding:0 18px;overflow-wrap:anywhere;word-break:break-word;text-align:left;min-height:56px}
+@media (max-width:390px){.cbtns .btn{font-size:16px;padding:0 14px}}
+@media (max-width:360px){.cbtns .btn{font-size:15px;padding:0 12px;gap:8px}}
+.cta .contact{margin-top:26px}
 
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--brass);color:var(--ink);font-weight:600;padding:14px 22px;border-radius:14px;opacity:0;pointer-events:none;transition:opacity 300ms ease, transform 300ms ease;z-index:20;font-size:17px;max-width:calc(100vw - 32px);text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -309,7 +315,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
   .reveal{opacity:1;transform:none;transition:none}
   .head{animation:none}
   .week i::after{transition:none;transform:scaleX(1)}
-  .slow .shot svg{transition:none;transform:none}
+  .slow .shot img{transition:none;transform:none}
 }
 @media (max-width:480px){
   [data-player="hero"] .slate small{display:none}
@@ -328,14 +334,11 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol><symbol id="aspect-ratio" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /> <path d="M7 12v-3h3" /> <path d="M17 12v3h-3" /></symbol><symbol id="backhoe" viewBox="0 0 24 24"><path d="M2 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M11 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M13 19l-9 0" /> <path d="M4 15l9 0" /> <path d="M8 12v-5h2a3 3 0 0 1 3 3v5" /> <path d="M5 15v-2a1 1 0 0 1 1 -1h7" /> <path d="M21.12 9.88l-3.12 -4.88l-5 5" /> <path d="M21.12 9.88a3 3 0 0 1 -2.12 5.12a3 3 0 0 1 -2.12 -.88l4.24 -4.24" /></symbol><symbol id="bolt" viewBox="0 0 24 24"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" /></symbol><symbol id="building-factory-2" viewBox="0 0 24 24"><path d="M3 21h18" /> <path d="M5 21v-12l5 4v-4l5 4h4" /> <path d="M19 21v-8l-1.436 -9.574a.5 .5 0 0 0 -.495 -.426h-1.145a.5 .5 0 0 0 -.494 .418l-1.43 8.582" /> <path d="M9 17h1" /> <path d="M14 17h1" /></symbol><symbol id="calendar-event" viewBox="0 0 24 24"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /> <path d="M16 3l0 4" /> <path d="M8 3l0 4" /> <path d="M4 11l16 0" /> <path d="M8 15h2v2h-2l0 -2" /></symbol><symbol id="camera" viewBox="0 0 24 24"><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /> <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></symbol><symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></symbol><symbol id="clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 7v5l3 3" /></symbol><symbol id="copy" viewBox="0 0 24 24"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></symbol><symbol id="crane" viewBox="0 0 24 24"><path d="M6 21h6" /> <path d="M9 21v-18l-6 6h18" /> <path d="M9 3l10 6" /> <path d="M17 9v4a2 2 0 1 1 -2 2" /></symbol><symbol id="crop-portrait" viewBox="0 0 24 24"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -12" /></symbol><symbol id="drone" viewBox="0 0 24 24"><path d="M10 10h4v4h-4l0 -4" /> <path d="M10 10l-3.5 -3.5" /> <path d="M9.96 6a3.5 3.5 0 1 0 -3.96 3.96" /> <path d="M14 10l3.5 -3.5" /> <path d="M18 9.96a3.5 3.5 0 1 0 -3.96 -3.96" /> <path d="M14 14l3.5 3.5" /> <path d="M14.04 18a3.5 3.5 0 1 0 3.96 -3.96" /> <path d="M10 14l-3.5 3.5" /> <path d="M6 14.04a3.5 3.5 0 1 0 3.96 3.96" /></symbol><symbol id="ear" viewBox="0 0 24 24"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4" /> <path d="M10 10a3 3 0 1 1 5 2.2" /></symbol><symbol id="eye" viewBox="0 0 24 24"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></symbol><symbol id="folder-up" viewBox="0 0 24 24"><path d="M12 19h-7a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v3.5" /> <path d="M19 22v-6" /> <path d="M22 19l-3 -3l-3 3" /></symbol><symbol id="helicopter" viewBox="0 0 24 24"><path d="M3 10l1 2h6" /> <path d="M12 9a2 2 0 0 0 -2 2v3c0 1.1 .9 2 2 2h7a2 2 0 0 0 2 -2c0 -3.31 -3.13 -5 -7 -5h-2" /> <path d="M13 9l0 -3" /> <path d="M5 6l15 0" /> <path d="M15 9.1v3.9h5.5" /> <path d="M15 19l0 -3" /> <path d="M19 19l-8 0" /></symbol><symbol id="home" viewBox="0 0 24 24"><path d="M5 12l-2 0l9 -9l9 9l-2 0" /> <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /> <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></symbol><symbol id="mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /> <path d="M3 7l9 6l9 -6" /></symbol><symbol id="map-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></symbol><symbol id="message-circle" viewBox="0 0 24 24"><path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" /></symbol><symbol id="minus" viewBox="0 0 24 24"><path d="M5 12l14 0" /></symbol><symbol id="movie" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /> <path d="M8 4l0 16" /> <path d="M16 4l0 16" /> <path d="M4 8l4 0" /> <path d="M4 16l4 0" /> <path d="M4 12l16 0" /> <path d="M16 8l4 0" /> <path d="M16 16l4 0" /></symbol><symbol id="palette" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /> <path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></symbol><symbol id="plane" viewBox="0 0 24 24"><path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3l4 7" /></symbol><symbol id="player-play" viewBox="0 0 24 24"><path d="M7 4v16l13 -8l-13 -8" /></symbol><symbol id="plus" viewBox="0 0 24 24"><path d="M12 5l0 14" /> <path d="M5 12l14 0" /></symbol><symbol id="refresh" viewBox="0 0 24 24"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /> <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></symbol><symbol id="ruler-2" viewBox="0 0 24 24"><path d="M17 3l4 4l-14 14l-4 -4l14 -14" /> <path d="M16 7l-1.5 -1.5" /> <path d="M13 10l-1.5 -1.5" /> <path d="M10 13l-1.5 -1.5" /> <path d="M7 16l-1.5 -1.5" /></symbol><symbol id="scissors" viewBox="0 0 24 24"><path d="M3 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M3 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.6 8.6l10.4 10.4" /> <path d="M8.6 15.4l10.4 -10.4" /></symbol><symbol id="sun-high" viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656" /> <path d="M6.343 17.657l-1.414 1.414" /> <path d="M6.343 6.343l-1.414 -1.414" /> <path d="M17.657 6.343l1.414 -1.414" /> <path d="M17.657 17.657l1.414 1.414" /> <path d="M4 12h-2" /> <path d="M12 4v-2" /> <path d="M20 12h2" /> <path d="M12 20v2" /></symbol><symbol id="trending-up" viewBox="0 0 24 24"><path d="M3 17l6 -6l4 4l8 -8" /> <path d="M14 7l7 0l0 7" /></symbol><symbol id="typography" viewBox="0 0 24 24"><path d="M4 20l3 0" /> <path d="M14 20l7 0" /> <path d="M6.9 15l6.9 0" /> <path d="M10.2 6.3l5.8 13.7" /> <path d="M5 20l6 -16l2 0l7 16" /></symbol><symbol id="user-check" viewBox="0 0 24 24"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h4" /> <path d="M15 19l2 2l4 -4" /></symbol><symbol id="users" viewBox="0 0 24 24"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /> <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol><symbol id="video" viewBox="0 0 24 24"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" /> <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" /></symbol><symbol id="volume" viewBox="0 0 24 24"><path d="M15 8a5 5 0 0 1 0 8" /> <path d="M17.7 5a9 9 0 0 1 0 14" /> <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" /></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></symbol><symbol id="aspect-ratio" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /> <path d="M7 12v-3h3" /> <path d="M17 12v3h-3" /></symbol><symbol id="backhoe" viewBox="0 0 24 24"><path d="M2 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M11 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M13 19l-9 0" /> <path d="M4 15l9 0" /> <path d="M8 12v-5h2a3 3 0 0 1 3 3v5" /> <path d="M5 15v-2a1 1 0 0 1 1 -1h7" /> <path d="M21.12 9.88l-3.12 -4.88l-5 5" /> <path d="M21.12 9.88a3 3 0 0 1 -2.12 5.12a3 3 0 0 1 -2.12 -.88l4.24 -4.24" /></symbol><symbol id="bolt" viewBox="0 0 24 24"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" /></symbol><symbol id="building-factory-2" viewBox="0 0 24 24"><path d="M3 21h18" /> <path d="M5 21v-12l5 4v-4l5 4h4" /> <path d="M19 21v-8l-1.436 -9.574a.5 .5 0 0 0 -.495 -.426h-1.145a.5 .5 0 0 0 -.494 .418l-1.43 8.582" /> <path d="M9 17h1" /> <path d="M14 17h1" /></symbol><symbol id="calendar-event" viewBox="0 0 24 24"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /> <path d="M16 3l0 4" /> <path d="M8 3l0 4" /> <path d="M4 11l16 0" /> <path d="M8 15h2v2h-2l0 -2" /></symbol><symbol id="camera" viewBox="0 0 24 24"><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /> <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></symbol><symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></symbol><symbol id="clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 7v5l3 3" /></symbol><symbol id="copy" viewBox="0 0 24 24"><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666" /> <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></symbol><symbol id="crane" viewBox="0 0 24 24"><path d="M6 21h6" /> <path d="M9 21v-18l-6 6h18" /> <path d="M9 3l10 6" /> <path d="M17 9v4a2 2 0 1 1 -2 2" /></symbol><symbol id="crop-portrait" viewBox="0 0 24 24"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -12" /></symbol><symbol id="drone" viewBox="0 0 24 24"><path d="M10 10h4v4h-4l0 -4" /> <path d="M10 10l-3.5 -3.5" /> <path d="M9.96 6a3.5 3.5 0 1 0 -3.96 3.96" /> <path d="M14 10l3.5 -3.5" /> <path d="M18 9.96a3.5 3.5 0 1 0 -3.96 -3.96" /> <path d="M14 14l3.5 3.5" /> <path d="M14.04 18a3.5 3.5 0 1 0 3.96 -3.96" /> <path d="M10 14l-3.5 3.5" /> <path d="M6 14.04a3.5 3.5 0 1 0 3.96 3.96" /></symbol><symbol id="ear" viewBox="0 0 24 24"><path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4" /> <path d="M10 10a3 3 0 1 1 5 2.2" /></symbol><symbol id="eye" viewBox="0 0 24 24"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></symbol><symbol id="folder-up" viewBox="0 0 24 24"><path d="M12 19h-7a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v3.5" /> <path d="M19 22v-6" /> <path d="M22 19l-3 -3l-3 3" /></symbol><symbol id="helicopter" viewBox="0 0 24 24"><path d="M3 10l1 2h6" /> <path d="M12 9a2 2 0 0 0 -2 2v3c0 1.1 .9 2 2 2h7a2 2 0 0 0 2 -2c0 -3.31 -3.13 -5 -7 -5h-2" /> <path d="M13 9l0 -3" /> <path d="M5 6l15 0" /> <path d="M15 9.1v3.9h5.5" /> <path d="M15 19l0 -3" /> <path d="M19 19l-8 0" /></symbol><symbol id="home" viewBox="0 0 24 24"><path d="M5 12l-2 0l9 -9l9 9l-2 0" /> <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /> <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></symbol><symbol id="mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /> <path d="M3 7l9 6l9 -6" /></symbol><symbol id="map-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></symbol><symbol id="message-circle" viewBox="0 0 24 24"><path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" /></symbol><symbol id="minus" viewBox="0 0 24 24"><path d="M5 12l14 0" /></symbol><symbol id="movie" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /> <path d="M8 4l0 16" /> <path d="M16 4l0 16" /> <path d="M4 8l4 0" /> <path d="M4 16l4 0" /> <path d="M4 12l16 0" /> <path d="M16 8l4 0" /> <path d="M16 16l4 0" /></symbol><symbol id="palette" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /> <path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></symbol><symbol id="plane" viewBox="0 0 24 24"><path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3l4 7" /></symbol><symbol id="player-play" viewBox="0 0 24 24"><path d="M7 4v16l13 -8l-13 -8" /></symbol><symbol id="plus" viewBox="0 0 24 24"><path d="M12 5l0 14" /> <path d="M5 12l14 0" /></symbol><symbol id="refresh" viewBox="0 0 24 24"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /> <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></symbol><symbol id="ruler-2" viewBox="0 0 24 24"><path d="M17 3l4 4l-14 14l-4 -4l14 -14" /> <path d="M16 7l-1.5 -1.5" /> <path d="M13 10l-1.5 -1.5" /> <path d="M10 13l-1.5 -1.5" /> <path d="M7 16l-1.5 -1.5" /></symbol><symbol id="scissors" viewBox="0 0 24 24"><path d="M3 7a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M3 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.6 8.6l10.4 10.4" /> <path d="M8.6 15.4l10.4 -10.4" /></symbol><symbol id="sun-high" viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656" /> <path d="M6.343 17.657l-1.414 1.414" /> <path d="M6.343 6.343l-1.414 -1.414" /> <path d="M17.657 6.343l1.414 -1.414" /> <path d="M17.657 17.657l1.414 1.414" /> <path d="M4 12h-2" /> <path d="M12 4v-2" /> <path d="M20 12h2" /> <path d="M12 20v2" /></symbol><symbol id="trending-up" viewBox="0 0 24 24"><path d="M3 17l6 -6l4 4l8 -8" /> <path d="M14 7l7 0l0 7" /></symbol><symbol id="typography" viewBox="0 0 24 24"><path d="M4 20l3 0" /> <path d="M14 20l7 0" /> <path d="M6.9 15l6.9 0" /> <path d="M10.2 6.3l5.8 13.7" /> <path d="M5 20l6 -16l2 0l7 16" /></symbol><symbol id="user-check" viewBox="0 0 24 24"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /> <path d="M6 21v-2a4 4 0 0 1 4 -4h4" /> <path d="M15 19l2 2l4 -4" /></symbol><symbol id="users" viewBox="0 0 24 24"><path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /> <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" /> <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol><symbol id="video" viewBox="0 0 24 24"><path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4" /> <path d="M3 8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -8" /></symbol><symbol id="volume" viewBox="0 0 24 24"><path d="M15 8a5 5 0 0 1 0 8" /> <path d="M17.7 5a9 9 0 0 1 0 14" /> <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" /></symbol><symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></symbol><symbol id="brand-whatsapp" viewBox="0 0 24 24"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></symbol><symbol id="address-book" viewBox="0 0 24 24"><path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2" /><path d="M10 16h6" /><path d="M11 11a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M4 8h3" /><path d="M4 12h3" /><path d="M4 16h3" /></symbol></svg>
 
 <div class="wrap">
   <header class="top">
-    <div class="who">
-      <span class="mark" aria-label="BKH Media Agency">BKH&nbsp;MEDIA&nbsp;AGENCY</span>
-      <span class="jph"><span class="x" aria-hidden="true">&times;&nbsp;</span>Jürgen Production House</span>
-    </div>
+    <span class="by">Prepared by <b>Brandon Hansen</b></span>
     <span class="upd">Prices as of Thu 26 Nov 2026</span>
   </header>
 </div>
@@ -348,6 +351,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
     <a href="#editing">Editing prices</a>
     <a href="#shooting">Shooting prices</a>
     <a href="#week">A week</a>
+    <a href="#proof">Our work</a>
     <a href="#start">Start</a>
   </div>
 </nav>
@@ -355,61 +359,61 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 <div class="wrap">
   <div class="hero">
     <div>
-      <span class="for"><svg class="ico"><use href="#map-pin"/></svg>Prepared for Wild Modular</span>
+      <span class="for"><svg class="ico" aria-hidden="true" focusable="false"><use href="#map-pin"/></svg>Prepared for Wild Modular</span>
       <h1>Every build, on film, <span class="gold-t">every week</span></h1>
       <p class="lead">Three finished videos a week, and a camera crew on site when it counts. One team for both.</p>
       <div class="btns">
-        <a class="btn gold" href="#editing">See the prices<svg class="ico"><use href="#arrow-right"/></svg></a>
-        <a class="btn ghost" href="#start"><svg class="ico"><use href="#calendar-event"/></svg>How we'd start</a>
+        <a class="btn gold" href="#editing">See the prices<svg class="ico" aria-hidden="true" focusable="false"><use href="#arrow-right"/></svg></a>
+        <a class="btn ghost" href="#start"><svg class="ico" aria-hidden="true" focusable="false"><use href="#calendar-event"/></svg>How we'd start</a>
       </div>
     </div>
     <div class="stage" aria-hidden="true">
       <div class="screen wide" data-player="hero">
-        <div class="shot s1 on"><svg viewBox="0 0 24 24"><use href="#backhoe"/></svg></div>
-        <div class="shot s2"><svg viewBox="0 0 24 24"><use href="#ruler-2"/></svg></div>
-        <div class="shot s3"><svg viewBox="0 0 24 24"><use href="#building-factory-2"/></svg></div>
-        <div class="shot s4"><svg viewBox="0 0 24 24"><use href="#helicopter"/></svg></div>
-        <div class="shot s5"><svg viewBox="0 0 24 24"><use href="#home"/></svg></div>
+        <div class="shot on"><img src="wm/coast.webp" alt="" decoding="async"></div>
+        <div class="shot"><img src="wm/beach.webp" alt="" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="wm/dusk.webp" alt="" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="wm/waves.webp" alt="" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="wm/balcony.webp" alt="" decoding="async" loading="lazy"></div>
         <div class="title">Hook Island<i>20.1° S &nbsp;148.9° E</i></div>
-        <div class="slate" style="padding-right:36%"><span data-name>Demolition</span><small data-count>Shot 01</small></div>
+        <div class="slate" style="padding-right:36%"><span data-name>Coast</span><small data-count>Shot 01</small></div>
       </div>
       <div class="screen tall" data-player="hero2">
-        <div class="shot s4 on"><svg viewBox="0 0 24 24"><use href="#helicopter"/></svg></div>
-        <div class="shot s5"><svg viewBox="0 0 24 24"><use href="#home"/></svg></div>
-        <div class="shot s1"><svg viewBox="0 0 24 24"><use href="#backhoe"/></svg></div>
-        <div class="shot s3"><svg viewBox="0 0 24 24"><use href="#building-factory-2"/></svg></div>
-        <div class="shot s2"><svg viewBox="0 0 24 24"><use href="#ruler-2"/></svg></div>
+        <div class="shot on"><img src="wm/p-sea.webp" alt="" decoding="async"></div>
+        <div class="shot"><img src="wm/p-dusk.webp" alt="" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="wm/p-coast.webp" alt="" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="wm/p-towers.webp" alt="" decoding="async" loading="lazy"></div>
+        <div class="shot"><img src="wm/p-spires.webp" alt="" decoding="async" loading="lazy"></div>
         <div class="title">Hook<br>Island</div>
       </div>
     </div>
   </div>
 
   <div class="facts reveal">
-    <div class="fact"><svg class="ico"><use href="#video"/></svg><div><b>3 videos a week</b><span>12 a month, every month</span></div></div>
-    <div class="fact"><svg class="ico"><use href="#clock"/></svg><div><b>Up to 60 seconds</b><span>each, ready to post</span></div></div>
-    <div class="fact"><svg class="ico"><use href="#bolt"/></svg><div><b>48-hour turnaround</b><span>per video on Standard</span></div></div>
-    <div class="fact"><svg class="ico"><use href="#camera"/></svg><div><b>1 to 4 day shoots</b><span>local or away</span></div></div>
+    <div class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#video"/></svg><div><b>3 videos a week</b><span>12 a month, every month</span></div></div>
+    <div class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#clock"/></svg><div><b>Up to 60 seconds</b><span>each, ready to post</span></div></div>
+    <div class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#calendar-event"/></svg><div><b>Every week, on schedule</b><span>a set delivery day you can plan around</span></div></div>
+    <div class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#camera"/></svg><div><b>1 to 4 day shoots</b><span>local or away</span></div></div>
   </div>
 
   <section id="heard">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#ear"/></svg>We heard you</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#ear"/></svg>We heard you</span>
       <h2>The brief, as we heard it</h2>
       <p>Six things you asked for. This page answers each one.</p>
     </div>
     <div class="heard">
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#video"/></svg></span><div><b>Three videos a week</b><span>Cut from footage you send us. Always three, however much comes in.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#clock"/></svg></span><div><b>60 seconds, at most</b><span>Short, sharp and made to be watched to the end.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#camera"/></svg></span><div><b>Shoot days, 1 to 4</b><span>A day rate that drops as the trip gets longer.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#scissors"/></svg></span><div><b>Two separate prices</b><span>Editing on one side. Shooting on the other.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#aspect-ratio"/></svg></span><div><b>A re-edit price</b><span>For YouTube, your website, or landscape to portrait.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#user-check"/></svg></span><div><b>One consistent editor</b><span>So every video looks and sounds like Wild Modular.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#video"/></svg></span><div><b>Three videos a week</b><span>Cut from footage you send us. Always three, however much comes in.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#clock"/></svg></span><div><b>60 seconds, at most</b><span>Short, sharp and made to be watched to the end.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#camera"/></svg></span><div><b>Shoot days, 1 to 4</b><span>A day rate that drops as the trip gets longer.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#scissors"/></svg></span><div><b>Two separate prices</b><span>Editing on one side. Shooting on the other.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#aspect-ratio"/></svg></span><div><b>A re-edit price</b><span>For YouTube, your website, or landscape to portrait.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#user-check"/></svg></span><div><b>One consistent editor</b><span>So every video looks and sounds like Wild Modular.</span></div></div>
     </div>
   </section>
 
   <section id="opportunity">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#trending-up"/></svg>The opportunity</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#trending-up"/></svg>The opportunity</span>
       <h2>It already works. Let's keep it going every week.</h2>
       <p>Your own numbers show people want to watch this. Steady posting is how it compounds.</p>
     </div>
@@ -430,7 +434,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 
   <section id="look">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#eye"/></svg>The look</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#eye"/></svg>The look</span>
       <h2>The Local Project meets Red Bull</h2>
       <p>Two styles, one brand. Tap each one to see how it moves.</p>
     </div>
@@ -442,24 +446,24 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
         </div>
         <div class="stage" style="padding-bottom:0;max-width:none" aria-hidden="true">
           <div class="screen wide" data-player="look">
-            <div class="shot s1 on"><svg viewBox="0 0 24 24"><use href="#backhoe"/></svg></div>
-            <div class="shot s3"><svg viewBox="0 0 24 24"><use href="#building-factory-2"/></svg></div>
-            <div class="shot s4"><svg viewBox="0 0 24 24"><use href="#helicopter"/></svg></div>
-            <div class="shot s2"><svg viewBox="0 0 24 24"><use href="#crane"/></svg></div>
-            <div class="shot s5"><svg viewBox="0 0 24 24"><use href="#home"/></svg></div>
-            <div class="slate"><span data-name>On site</span><small data-count>Shot 01</small></div>
+            <div class="shot on"><img src="wm/aerial.webp" data-b="wm/aerial.webp" data-f="wm/living.webp" alt="" decoding="async" loading="lazy"></div>
+            <div class="shot"><img src="wm/towers.webp" data-b="wm/towers.webp" data-f="wm/kitchen.webp" alt="" decoding="async" loading="lazy"></div>
+            <div class="shot"><img src="wm/shore.webp" data-b="wm/shore.webp" data-f="wm/balcony.webp" alt="" decoding="async" loading="lazy"></div>
+            <div class="shot"><img src="wm/spires.webp" data-b="wm/spires.webp" data-f="wm/glint.webp" alt="" decoding="async" loading="lazy"></div>
+            <div class="shot"><img src="wm/tower-sea.webp" data-b="wm/tower-sea.webp" data-f="wm/waves.webp" alt="" decoding="async" loading="lazy"></div>
+            <div class="slate"><span data-name>Aerial</span><small data-count>Shot 01</small></div>
           </div>
         </div>
       </div>
       <div class="lookcopy">
         <div class="ratio b" id="ratio" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="t"></i></div>
-        <p class="ref" id="lookref"><svg class="ico"><use href="#bolt"/></svg>In the spirit of Red Bull</p>
+        <p class="ref" id="lookref"><svg class="ico" aria-hidden="true" focusable="false"><use href="#bolt"/></svg>In the spirit of Red Bull</p>
         <h3 id="lookh">Build progress</h3>
         <p class="muted" id="lookp">Fast, loud and on site. The work, the people and the machines.</p>
         <ul class="beats" id="lookl">
-          <li><svg class="ico"><use href="#check"/></svg>Quick cuts that keep people watching</li>
-          <li><svg class="ico"><use href="#check"/></svg>Real faces and real work, up close</li>
-          <li><svg class="ico"><use href="#check"/></svg>Big moments: the lift, the truck, the install</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Quick cuts that keep people watching</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Real faces and real work, up close</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Big moments: the lift, the truck, the install</li>
         </ul>
       </div>
     </div>
@@ -467,47 +471,46 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 
   <section id="cut">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#scissors"/></svg>How we cut it</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#scissors"/></svg>How we cut it</span>
       <h2>Sixty seconds, built to hold attention</h2>
       <p>Four things go into every video.</p>
     </div>
     <div class="strip reveal" aria-hidden="true">
-      <div class="ticks" id="ticks"></div>
+      <div class="ticks" id="ticks"><img src="wm/t-coast.webp" alt="" loading="lazy"><img src="wm/t-aerial.webp" alt="" loading="lazy"><img src="wm/t-towers.webp" alt="" loading="lazy"><img src="wm/t-living.webp" alt="" loading="lazy"><img src="wm/t-waves.webp" alt="" loading="lazy"><img src="wm/t-beach.webp" alt="" loading="lazy"><img src="wm/t-spires.webp" alt="" loading="lazy"><img src="wm/t-kitchen.webp" alt="" loading="lazy"><img src="wm/t-sea.webp" alt="" loading="lazy"><img src="wm/t-shore.webp" alt="" loading="lazy"><img src="wm/t-dusk.webp" alt="" loading="lazy"><img src="wm/t-glint.webp" alt="" loading="lazy"></div>
       <span class="head" id="head"></span>
       <div class="cap"><span>Start</span><span>about one cut a second</span><span>60 seconds</span></div>
     </div>
     <div class="four">
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#scissors"/></svg></span><div><b>About one cut a second</b><span>Pace that keeps thumbs still.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#sun-high"/></svg></span><div><b>A warm grade</b><span>Every camera matched, then one rich look.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#typography"/></svg></span><div><b>Title cards</b><span>Project name and place, in your brand.</span></div></div>
-      <div class="card reveal"><span class="n"><svg class="ico"><use href="#volume"/></svg></span><div><b>Sound design</b><span>You hear the site, not just music.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#scissors"/></svg></span><div><b>About one cut a second</b><span>Pace that keeps thumbs still.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#sun-high"/></svg></span><div><b>A warm grade</b><span>Every camera matched, then one rich look.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#typography"/></svg></span><div><b>Title cards</b><span>Project name and place, in your brand.</span></div></div>
+      <div class="card reveal"><span class="n"><svg class="ico" aria-hidden="true" focusable="false"><use href="#volume"/></svg></span><div><b>Sound design</b><span>You hear the site, not just music.</span></div></div>
     </div>
   </section>
 
   <section id="series">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#movie"/></svg>The 5-part build series</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#movie"/></svg>The 5-part build series</span>
       <h2>One project, told in five parts</h2>
       <p>From bare site to open doors. Tap a part to see it.</p>
     </div>
     <div class="series reveal" role="group" aria-label="The five parts">
-      <button class="ep" type="button" data-ep="0" aria-pressed="true"><svg class="ico"><use href="#backhoe"/></svg><b>Demolition</b><small>Part 1</small></button>
-      <button class="ep" type="button" data-ep="1" aria-pressed="false"><svg class="ico"><use href="#ruler-2"/></svg><b>Architect</b><small>Part 2</small></button>
-      <button class="ep" type="button" data-ep="2" aria-pressed="false"><svg class="ico"><use href="#building-factory-2"/></svg><b>Factory build</b><small>Part 3</small></button>
-      <button class="ep" type="button" data-ep="3" aria-pressed="false"><svg class="ico"><use href="#helicopter"/></svg><b>Transport</b><small>Part 4</small></button>
-      <button class="ep" type="button" data-ep="4" aria-pressed="false"><svg class="ico"><use href="#home"/></svg><b>Install</b><small>Part 5</small></button>
+      <button class="ep" type="button" data-ep="0" aria-pressed="true"><img src="wm/t-shore.webp" alt="" loading="lazy"><b>Demolition</b><small>Part 1</small></button>
+      <button class="ep" type="button" data-ep="1" aria-pressed="false"><img src="wm/t-living.webp" alt="" loading="lazy"><b>Architect</b><small>Part 2</small></button>
+      <button class="ep" type="button" data-ep="2" aria-pressed="false"><img src="wm/t-kitchen.webp" alt="" loading="lazy"><b>Factory build</b><small>Part 3</small></button>
+      <button class="ep" type="button" data-ep="3" aria-pressed="false"><img src="wm/t-sea.webp" alt="" loading="lazy"><b>Transport</b><small>Part 4</small></button>
+      <button class="ep" type="button" data-ep="4" aria-pressed="false"><img src="wm/t-dusk.webp" alt="" loading="lazy"><b>Install</b><small>Part 5</small></button>
     </div>
     <div class="epd reveal" aria-live="polite">
-      <span class="k" id="epk">Part 1 of 5</span>
-      <h3 id="eph">Demolition</h3>
-      <p id="epp">The site before. Clearing, prep and the first day on the ground.</p>
+      <img id="epimg" src="wm/shore.webp" alt="" loading="lazy">
+      <div class="tx"><span class="k" id="epk">Part 1 of 5</span><h3 id="eph">Demolition</h3><p id="epp">The site before. Clearing, prep and the first day on the ground.</p></div>
     </div>
-    <p class="note reveal"><svg class="ico"><use href="#users"/></svg>Filmed by us, your Sydney crew or your own team. Every part is cut by the same editor.</p>
+    <p class="note reveal"><svg class="ico" aria-hidden="true" focusable="false"><use href="#users"/></svg>Filmed by us, your Sydney crew or your own team. Every part is cut by the same editor. Pictures are frames from our own aerial and interior filming, shown for the look.</p>
   </section>
 
   <section id="editing">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#scissors"/></svg>Price 1 of 2</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#scissors"/></svg>Price 1 of 2</span>
       <h2>Editing, by the month</h2>
       <p>12 videos a month, 3 a week, up to 60 seconds each. Tap a plan to choose it.</p>
     </div>
@@ -517,9 +520,9 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
         <div class="price"><b>A$7,500</b><span>a month</span></div>
         <p class="one">The three a week, in one shape.</p>
         <ul class="incl">
-          <li><svg class="ico"><use href="#video"/></svg>12 videos a month, 3 a week</li>
-          <li><svg class="ico"><use href="#crop-portrait"/></svg>Vertical or landscape, one of the two</li>
-          <li><svg class="ico"><use href="#refresh"/></svg>1 round of changes per video</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#video"/></svg>12 videos a month, 3 a week</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#crop-portrait"/></svg>Vertical or landscape, one of the two</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#refresh"/></svg>1 round of changes per video</li>
         </ul>
         <p class="per">About A$625 a video</p>
       </button>
@@ -529,11 +532,11 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
         <div class="price"><b>A$8,950</b><span>a month</span></div>
         <p class="one">Your look, built once and kept.</p>
         <ul class="incl">
-          <li><svg class="ico"><use href="#video"/></svg>12 videos a month, 3 a week</li>
-          <li><svg class="ico"><use href="#aspect-ratio"/></svg>One extra aspect ratio included</li>
-          <li><svg class="ico"><use href="#palette"/></svg>Your brand look built and kept</li>
-          <li><svg class="ico"><use href="#bolt"/></svg>48-hour turnaround per video</li>
-          <li><svg class="ico"><use href="#refresh"/></svg>1 round of changes per video</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#video"/></svg>12 videos a month, 3 a week</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#aspect-ratio"/></svg>One extra aspect ratio included</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#palette"/></svg>Your brand look built and kept</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#calendar-event"/></svg>A set weekly delivery day</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#refresh"/></svg>1 round of changes per video</li>
         </ul>
         <p class="per">About A$746 a video</p>
       </button>
@@ -542,11 +545,11 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
         <div class="price"><b>A$10,500</b><span>a month</span></div>
         <p class="one">Every shape, every platform.</p>
         <ul class="incl">
-          <li><svg class="ico"><use href="#video"/></svg>12 videos a month, 3 a week</li>
-          <li><svg class="ico"><use href="#aspect-ratio"/></svg>All aspect ratios</li>
-          <li><svg class="ico"><use href="#movie"/></svg>1 long re-cut a month, YouTube or website</li>
-          <li><svg class="ico"><use href="#bolt"/></svg>Priority turnaround</li>
-          <li><svg class="ico"><use href="#refresh"/></svg>2 rounds of changes per video</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#video"/></svg>12 videos a month, 3 a week</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#aspect-ratio"/></svg>All aspect ratios</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#movie"/></svg>1 long re-cut a month, YouTube or website</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#bolt"/></svg>Priority scheduling</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#refresh"/></svg>2 rounds of changes per video</li>
         </ul>
         <p class="per">About A$875 a video</p>
       </button>
@@ -554,12 +557,12 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 
     <h3 class="sub2 reveal">Extras, on any plan</h3>
     <div class="addons">
-      <div class="add reveal" data-add="extra"><svg class="ico"><use href="#video"/></svg><div class="txt"><b>Extra video</b><span>A$950 each · beyond the 12</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one extra video"><svg class="ico"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one extra video"><svg class="ico"><use href="#plus"/></svg></button></div></div>
-      <div class="add reveal" data-add="shape"><svg class="ico"><use href="#crop-portrait"/></svg><div class="txt"><b>New shape</b><span>A$295 each · landscape to portrait, or back</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one new shape"><svg class="ico"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one new shape"><svg class="ico"><use href="#plus"/></svg></button></div></div>
-      <div class="add reveal" data-add="long"><svg class="ico"><use href="#movie"/></svg><div class="txt"><b>Long-form re-cut</b><span>A$950 each · YouTube or website</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one long-form re-cut"><svg class="ico"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one long-form re-cut"><svg class="ico"><use href="#plus"/></svg></button></div></div>
-      <div class="add reveal" data-add="round"><svg class="ico"><use href="#refresh"/></svg><div class="txt"><b>Extra round of changes</b><span>A$395 each</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one extra round"><svg class="ico"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one extra round"><svg class="ico"><use href="#plus"/></svg></button></div></div>
+      <div class="add reveal" data-add="extra"><svg class="ico" aria-hidden="true" focusable="false"><use href="#video"/></svg><div class="txt"><b>Extra video</b><span>A$950 each · beyond the 12</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one extra video"><svg class="ico" aria-hidden="true" focusable="false"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one extra video"><svg class="ico" aria-hidden="true" focusable="false"><use href="#plus"/></svg></button></div></div>
+      <div class="add reveal" data-add="shape"><svg class="ico" aria-hidden="true" focusable="false"><use href="#crop-portrait"/></svg><div class="txt"><b>New shape</b><span>A$295 each · landscape to portrait, or back</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one new shape"><svg class="ico" aria-hidden="true" focusable="false"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one new shape"><svg class="ico" aria-hidden="true" focusable="false"><use href="#plus"/></svg></button></div></div>
+      <div class="add reveal" data-add="long"><svg class="ico" aria-hidden="true" focusable="false"><use href="#movie"/></svg><div class="txt"><b>Long-form re-cut</b><span>A$950 each · YouTube or website</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one long-form re-cut"><svg class="ico" aria-hidden="true" focusable="false"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one long-form re-cut"><svg class="ico" aria-hidden="true" focusable="false"><use href="#plus"/></svg></button></div></div>
+      <div class="add reveal" data-add="round"><svg class="ico" aria-hidden="true" focusable="false"><use href="#refresh"/></svg><div class="txt"><b>Extra round of changes</b><span>A$395 each</span></div><div class="step"><button type="button" data-d="-1" aria-label="Remove one extra round"><svg class="ico" aria-hidden="true" focusable="false"><use href="#minus"/></svg></button><output>0</output><button type="button" data-d="1" aria-label="Add one extra round"><svg class="ico" aria-hidden="true" focusable="false"><use href="#plus"/></svg></button></div></div>
     </div>
-    <p class="note reveal"><svg class="ico"><use href="#bolt"/></svg>Need it in a rush? Add 20% to that video.</p>
+    <p class="note reveal"><svg class="ico" aria-hidden="true" focusable="false"><use href="#bolt"/></svg>Need it in a rush? Add 20% to that video.</p>
 
     <div class="total reveal" aria-live="polite">
       <div>
@@ -567,13 +570,13 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
         <div class="sum" id="sum">A$8,950</div>
         <div class="sub" id="sumsub">Standard, a month</div>
       </div>
-      <a class="btn gold" href="#shooting">Next, shooting<svg class="ico"><use href="#arrow-right"/></svg></a>
+      <a class="btn gold" href="#shooting">Next, shooting<svg class="ico" aria-hidden="true" focusable="false"><use href="#arrow-right"/></svg></a>
     </div>
   </section>
 
   <section id="shooting">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#camera"/></svg>Price 2 of 2</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#camera"/></svg>Price 2 of 2</span>
       <h2>Shooting, by the day</h2>
       <p>Priced apart from editing. The longer the trip, the lower the day rate.</p>
     </div>
@@ -595,7 +598,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
             <button type="button" data-days="4" aria-pressed="false">4</button>
           </div>
         </div>
-        <div class="add" data-add="op2" style="background:var(--e3)"><svg class="ico"><use href="#users"/></svg><div class="txt"><b>Second operator</b><span>A$1,100 a day</span></div><div class="step"><button type="button" id="op2" aria-pressed="false" aria-label="Add a second operator" style="width:auto;padding:0 16px;font-size:18px;font-weight:600">Add</button></div></div>
+        <div class="add" data-add="op2" style="background:var(--e3)"><svg class="ico" aria-hidden="true" focusable="false"><use href="#users"/></svg><div class="txt"><b>Second operator</b><span>A$1,100 a day</span></div><div class="step"><button type="button" id="op2" aria-pressed="false" aria-label="Add a second operator" style="width:auto;padding:0 16px;font-size:18px;font-weight:600">Add</button></div></div>
       </div>
       <div class="out" aria-live="polite">
         <div class="lbl">Shooting, your pick</div>
@@ -620,18 +623,18 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
       <div class="panel reveal">
         <h3>In every shoot day</h3>
         <ul class="incl">
-          <li><svg class="ico"><use href="#check"/></svg>One camera operator, up to 8 hours on site</li>
-          <li><svg class="ico"><use href="#check"/></svg>Jürgen Production House camera kit</li>
-          <li><svg class="ico"><use href="#check"/></svg>Kit prep before the day</li>
-          <li><svg class="ico"><use href="#check"/></svg>Footage backed up, checked and delivered</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>One camera operator, up to 8 hours on site</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Professional camera kit</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Kit prep before the day</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Footage backed up, checked and delivered</li>
         </ul>
       </div>
       <div class="panel reveal">
         <h3>Quoted on top</h3>
         <ul class="incl">
-          <li><svg class="ico"><use href="#plane"/></svg>Travel, accommodation and permits at cost, approved by you first</li>
-          <li><svg class="ico"><use href="#drone"/></svg>Aerial and drone coverage quoted per shoot.</li>
-          <li><svg class="ico"><use href="#scissors"/></svg>Editing is priced separately, above</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#plane"/></svg>Travel, accommodation and permits at cost, approved by you first</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#drone"/></svg>Aerial and drone coverage quoted per shoot.</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#scissors"/></svg>Editing is priced separately, above</li>
         </ul>
       </div>
     </div>
@@ -639,29 +642,38 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 
   <section id="week">
     <div class="sh reveal">
-      <span class="kick"><svg class="ico"><use href="#calendar-event"/></svg>How a week runs</span>
+      <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#calendar-event"/></svg>How a week runs</span>
       <h2>Simple on your side</h2>
       <p>Four steps, on repeat. You talk to one person.</p>
     </div>
     <ol class="how">
-      <li class="reveal"><span class="n"><svg class="ico"><use href="#folder-up"/></svg></span><b>1. Footage in</b><p>Drop the week's footage in one shared folder.</p></li>
-      <li class="reveal"><span class="n"><svg class="ico"><use href="#scissors"/></svg></span><b>2. We cut</b><p>First cuts back within 48 hours on Standard.</p></li>
-      <li class="reveal"><span class="n"><svg class="ico"><use href="#message-circle"/></svg></span><b>3. You review</b><p>One round of changes, all in one place.</p></li>
-      <li class="reveal"><span class="n"><svg class="ico"><use href="#player-play"/></svg></span><b>4. Ready to post</b><p>Three finished videos, every week.</p></li>
+      <li class="reveal"><span class="st">Step 1</span><span class="n" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#folder-up"/></svg></span><b>Footage in</b><p>Drop the week's footage in one shared folder.</p></li>
+      <li class="reveal"><span class="st">Step 2</span><span class="n" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#scissors"/></svg></span><b>We cut</b><p>Your editor cuts the week's batch to a set delivery day.</p></li>
+      <li class="reveal"><span class="st">Step 3</span><span class="n" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#message-circle"/></svg></span><b>You review</b><p>One round of changes, all in one place.</p></li>
+      <li class="reveal"><span class="st">Step 4</span><span class="n" aria-hidden="true"><svg class="ico" aria-hidden="true" focusable="false"><use href="#player-play"/></svg></span><b>Ready to post</b><p>Three finished videos, every week.</p></li>
     </ol>
   </section>
 
   <section id="proof">
     <div class="proof reveal">
-      <div>
-        <span class="kick"><svg class="ico"><use href="#camera"/></svg>Proof</span>
-        <h2>Real cameras. Real projects.</h2>
-        <p class="muted" style="margin-top:12px">Property and development film from the Gold Coast, shot and cut by this team.</p>
-        <div class="names"><span>Kollosche</span><span>86 Hedges Avenue</span><span>111 Hedges Avenue</span></div>
+      <div class="head2">
+        <div>
+          <span class="kick"><svg class="ico" aria-hidden="true" focusable="false"><use href="#camera"/></svg>Proof</span>
+          <h2>Our work</h2>
+          <p class="muted" style="margin-top:12px;max-width:44ch">Property and development film from the Gold Coast, shot and cut by our team.</p>
+        </div>
+        <div class="side">
+          <a class="btn gold" href="https://f.io/790jnxha" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#player-play"/></svg>Watch our work</a>
+          <p class="muted" style="font-size:17px">Opens our film portfolio.</p>
+        </div>
       </div>
-      <div class="side">
-        <a class="btn gold" href="https://f.io/790jnxha" target="_blank" rel="noopener"><svg class="ico"><use href="#player-play"/></svg>Watch our work</a>
-        <p class="muted" style="font-size:17px">Opens the BKH Media Agency portfolio.</p>
+      <div class="gallery" role="group" aria-label="Frames from our recent filming">
+        <figure><img src="wm/dusk.webp" alt="" loading="lazy"><figcaption>Coastal towers at dusk</figcaption></figure>
+        <figure><img src="wm/aerial.webp" alt="" loading="lazy"><figcaption>Aerial, Gold Coast</figcaption></figure>
+        <figure><img src="wm/living.webp" alt="" loading="lazy"><figcaption>Interior, ocean view</figcaption></figure>
+        <figure><img src="wm/towers.webp" alt="" loading="lazy"><figcaption>Tower detail, drone</figcaption></figure>
+        <figure><img src="wm/waves.webp" alt="" loading="lazy"><figcaption>Surf and light</figcaption></figure>
+        <figure><img src="wm/beach.webp" alt="" loading="lazy"><figcaption>Beachfront from above</figcaption></figure>
       </div>
     </div>
   </section>
@@ -669,21 +681,30 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
   <div class="cta reveal" id="start">
     <div class="grid">
       <div>
-        <span class="when"><svg class="ico"><use href="#calendar-event"/></svg>A simple way to begin</span>
+        <span class="when"><svg class="ico" aria-hidden="true" focusable="false"><use href="#calendar-event"/></svg>A simple way to begin</span>
         <h2>Start with a 3-month pilot</h2>
         <p class="muted">Standard editing at A$8,950 a month. Shoot days added as you need them.</p>
         <ul class="need">
-          <li><svg class="ico"><use href="#check"/></svg>Your brand guide</li>
-          <li><svg class="ico"><use href="#check"/></svg>Your first footage drop</li>
-          <li><svg class="ico"><use href="#check"/></svg>Your first shoot window</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Your brand guide</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Your first footage drop</li>
+          <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Your first shoot window</li>
         </ul>
         <div class="btns">
-          <a class="btn gold" id="btn-mail" href="mailto:brandon@bkhmediaagency.com"><svg class="ico"><use href="#mail"/></svg>Email us to start</a>
-          <button class="btn ghost" id="btn-copy" type="button"><svg class="ico"><use href="#copy"/></svg>Copy my picks</button>
+          <a class="btn gold" id="btn-mail" href="mailto:brandon@bkhmediaagency.com"><svg class="ico" aria-hidden="true" focusable="false"><use href="#mail"/></svg>Email to start</a>
+          <button class="btn ghost" id="btn-copy" type="button"><svg class="ico" aria-hidden="true" focusable="false"><use href="#copy"/></svg>Copy my picks</button>
         </div>
       </div>
       <div class="reply" id="reply"></div>
     </div>
+    <div class="contact">
+        <div class="who2"><b>Brandon Hansen</b><span>Wild Modular video</span></div>
+        <div class="cbtns">
+          <a class="btn gold" href="https://wa.me/61400357305" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#brand-whatsapp"/></svg>WhatsApp</a>
+          <a class="btn ghost" href="tel:+61400357305"><svg class="ico" aria-hidden="true" focusable="false"><use href="#phone"/></svg>0400 357 305</a>
+          <a class="btn ghost" href="mailto:brandon@bkhmediaagency.com"><svg class="ico" aria-hidden="true" focusable="false"><use href="#mail"/></svg>brandon@bkhmediaagency.com</a>
+          <a class="btn ghost" href="wm/brandon-hansen.vcf" download="Brandon-Hansen.vcf"><svg class="ico" aria-hidden="true" focusable="false"><use href="#address-book"/></svg>Save contact</a>
+        </div>
+      </div>
   </div>
 
   <section id="fine">
@@ -691,22 +712,29 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
       <h2>The fine print</h2>
     </div>
     <ul class="good reveal">
-      <li><svg class="ico"><use href="#check"/></svg>All prices are in Australian dollars.</li>
-      <li><svg class="ico"><use href="#check"/></svg>Shooting and editing are priced separately.</li>
-      <li><svg class="ico"><use href="#check"/></svg>Camera kit and dates are confirmed before a shoot is locked in.</li>
-      <li><svg class="ico"><use href="#check"/></svg>One consistent editor on your account.</li>
-      <li><svg class="ico"><use href="#check"/></svg>1 round of changes per video on Lean and Standard.</li>
-      <li><svg class="ico"><use href="#check"/></svg>Travel, accommodation and permits are at cost, approved first.</li>
-      <li><svg class="ico"><use href="#check"/></svg>Crew size and specialty rigs quoted per shoot.</li>
-      <li><svg class="ico"><use href="#check"/></svg>Aerial and drone coverage quoted per shoot.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>All prices are in Australian dollars.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Shooting and editing are priced separately.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Camera kit and dates are confirmed before a shoot is locked in.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>One consistent editor on your account.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>1 round of changes per video on Lean and Standard.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Travel, accommodation and permits are at cost, approved first.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Crew size and specialty rigs quoted per shoot.</li>
+      <li><svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>Aerial and drone coverage quoted per shoot.</li>
     </ul>
   </section>
 </div>
 
 <footer>
-  <span class="mark" aria-label="BKH Media Agency">BKH&nbsp;MEDIA&nbsp;AGENCY</span>
-  <span class="jph">Jürgen Production House</span>
-  <p>Gold Coast, Queensland · <a href="mailto:brandon@bkhmediaagency.com">brandon@bkhmediaagency.com</a></p>
+  <div class="contact">
+        <div class="who2"><b>Brandon Hansen</b><span>Wild Modular video</span></div>
+        <div class="cbtns">
+          <a class="btn gold" href="https://wa.me/61400357305" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#brand-whatsapp"/></svg>WhatsApp</a>
+          <a class="btn ghost" href="tel:+61400357305"><svg class="ico" aria-hidden="true" focusable="false"><use href="#phone"/></svg>0400 357 305</a>
+          <a class="btn ghost" href="mailto:brandon@bkhmediaagency.com"><svg class="ico" aria-hidden="true" focusable="false"><use href="#mail"/></svg>brandon@bkhmediaagency.com</a>
+          <a class="btn ghost" href="wm/brandon-hansen.vcf" download="Brandon-Hansen.vcf"><svg class="ico" aria-hidden="true" focusable="false"><use href="#address-book"/></svg>Save contact</a>
+        </div>
+      </div>
+  <p>Prepared by Brandon Hansen for Wild Modular · Gold Coast, Queensland</p>
 </footer>
 
 <div class="toast" id="toast" role="status">Copied. Paste it into your email.</div>
@@ -718,7 +746,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
   function money(n){return "A$"+Math.round(n).toLocaleString("en-AU")}
 
   /* storyboard players */
-  var NAMES={hero:["Demolition","Architect","Factory build","Transport","Install"],look_b:["On site","Factory floor","The lift","Crane day","Doors open"],look_f:["Arrival","Interior","Detail","The view","Dusk"]};
+  var NAMES={hero:["Coast","Aerial","Towers at dusk","Surf","Shoreline"],look_b:["Aerial","Towers","Shoreline","Spires","Coast"],look_f:["Living","Kitchen","Balcony","Glint","Surf"]};
   function player(el,getNames,getMs){
     var shots=$$(".shot",el),i=0,nm=$("[data-name]",el),ct=$("[data-count]",el),t;
     function tick(){
@@ -744,17 +772,18 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
     look=k;var L=LOOK[k];
     $$(".tab").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.look===k?"true":"false")});
     lookEl.classList.toggle("slow",k==="f");
+    $$("img",lookEl).forEach(function(im){im.src=im.getAttribute("data-"+k)});
     $("#ratio").className="ratio "+k;
-    $("#lookref").innerHTML='<svg class="ico"><use href="#'+L.ic+'"/></svg>';$("#lookref").appendChild(document.createTextNode(L.ref));
+    $("#lookref").innerHTML='<svg class="ico" aria-hidden="true" focusable="false"><use href="#'+L.ic+'"/></svg>';$("#lookref").appendChild(document.createTextNode(L.ref));
     $("#lookh").textContent=L.h;$("#lookp").textContent=L.p;
     var ul=$("#lookl");ul.innerHTML="";
-    L.l.forEach(function(x){var li=document.createElement("li");li.innerHTML='<svg class="ico"><use href="#check"/></svg>';li.appendChild(document.createTextNode(x));ul.appendChild(li)});
+    L.l.forEach(function(x){var li=document.createElement("li");li.innerHTML='<svg class="ico" aria-hidden="true" focusable="false"><use href="#check"/></svg>';li.appendChild(document.createTextNode(x));ul.appendChild(li)});
     lp.restart();
   }
   $$(".tab").forEach(function(b){b.addEventListener("click",function(){setLook(b.dataset.look)})});
 
   /* cut strip */
-  var ticks=$("#ticks");for(var k=0;k<60;k++){ticks.appendChild(document.createElement("i"))}
+  var ticks=$("#ticks");
   function sizeHead(){$("#head").style.setProperty("--w",(ticks.clientWidth-3)+"px")}
   sizeHead();window.addEventListener("resize",sizeHead);
 
@@ -763,11 +792,11 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
   var st0=document.createElement("style");st0.textContent=".week i::after{transition-delay:inherit}";document.head.appendChild(st0);
 
   /* series */
-  var EPS=[["Demolition","The site before. Clearing, prep and the first day on the ground."],["Architect","The idea. The drawings, the design studio and why it is built this way."],["Factory build","Modules taking shape on the Sydney factory floor."],["Transport","On the road, on the water and under the helicopter."],["Install","Craned in, locked down, doors open. The payoff."]];
+  var EPS=[["Demolition","The site before. Clearing, prep and the first day on the ground.","shore"],["Architect","The idea. The drawings, the design studio and why it is built this way.","living"],["Factory build","Modules taking shape on the Sydney factory floor.","kitchen"],["Transport","On the road, on the water and under the helicopter.","sea"],["Install","Craned in, locked down, doors open. The payoff.","dusk"]];
   $$(".ep").forEach(function(b){b.addEventListener("click",function(){
     var n=Number(b.dataset.ep);
     $$(".ep").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
-    $("#epk").textContent="Part "+(n+1)+" of 5";$("#eph").textContent=EPS[n][0];$("#epp").textContent=EPS[n][1];
+    $("#epk").textContent="Part "+(n+1)+" of 5";$("#eph").textContent=EPS[n][0];$("#epp").textContent=EPS[n][1];$("#epimg").src="wm/"+EPS[n][2]+".webp";
   })});
 
   /* prices */
@@ -797,7 +826,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
     var ob=$("#op2");ob.setAttribute("aria-pressed",st.op2?"true":"false");ob.textContent=st.op2?"Added":"Add";ob.style.background=st.op2?"var(--brass)":"";ob.style.color=st.op2?"var(--ink)":"";ob.style.borderColor=st.op2?"var(--brass)":"";
     $('.add[data-add="op2"]').classList.toggle("on",st.op2);
     $$("#stbl tbody tr").forEach(function(r){r.classList.toggle("on",Number(r.dataset.r)===st.days)});
-    var txt="Hi, we'd like to talk about starting the 3-month pilot.\n\nEditing: "+P.n+", "+money(P.p)+" a month\nExtras: "+(lines.length?lines.join(", "):"none for now")+"\nEditing total: "+money(P.p+addTotal)+" a month\n\nFirst shoot idea: "+W+", "+D+(st.op2?", second operator":"")+", "+money(base+op)+"\n\nBest contact: ";
+    var txt="Hi Brandon, we'd like to talk about starting the 3-month pilot.\n\nEditing: "+P.n+", "+money(P.p)+" a month\nExtras: "+(lines.length?lines.join(", "):"none for now")+"\nEditing total: "+money(P.p+addTotal)+" a month\n\nFirst shoot idea: "+W+", "+D+(st.op2?", second operator":"")+", "+money(base+op)+"\n\nBest contact: ";
     var r=$("#reply");r.textContent=txt;r.dataset.text=txt;
     $("#btn-mail").href="mailto:brandon@bkhmediaagency.com?subject="+encodeURIComponent("Wild Modular, 3-month pilot")+"&body="+encodeURIComponent(txt);
     try{localStorage.setItem("wild-pick",JSON.stringify(st))}catch(e){}
