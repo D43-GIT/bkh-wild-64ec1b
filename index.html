@@ -678,8 +678,8 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
           <li><svg class="ico"><use href="#check"/></svg>Your first shoot window</li>
         </ul>
         <div class="btns">
-          <a class="btn gold" id="mail" href="mailto:brandon@bkhmediaagency.com"><svg class="ico"><use href="#mail"/></svg>Email us to start</a>
-          <button class="btn ghost" id="copy" type="button"><svg class="ico"><use href="#copy"/></svg>Copy my picks</button>
+          <a class="btn gold" id="btn-mail" href="mailto:brandon@bkhmediaagency.com"><svg class="ico"><use href="#mail"/></svg>Email us to start</a>
+          <button class="btn ghost" id="btn-copy" type="button"><svg class="ico"><use href="#copy"/></svg>Copy my picks</button>
         </div>
       </div>
       <div class="reply" id="reply"></div>
@@ -799,7 +799,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
     $$("#stbl tbody tr").forEach(function(r){r.classList.toggle("on",Number(r.dataset.r)===st.days)});
     var txt="Hi, we'd like to talk about starting the 3-month pilot.\n\nEditing: "+P.n+", "+money(P.p)+" a month\nExtras: "+(lines.length?lines.join(", "):"none for now")+"\nEditing total: "+money(P.p+addTotal)+" a month\n\nFirst shoot idea: "+W+", "+D+(st.op2?", second operator":"")+", "+money(base+op)+"\n\nBest contact: ";
     var r=$("#reply");r.textContent=txt;r.dataset.text=txt;
-    $("#mail").href="mailto:brandon@bkhmediaagency.com?subject="+encodeURIComponent("Wild Modular, 3-month pilot")+"&body="+encodeURIComponent(txt);
+    $("#btn-mail").href="mailto:brandon@bkhmediaagency.com?subject="+encodeURIComponent("Wild Modular, 3-month pilot")+"&body="+encodeURIComponent(txt);
     try{localStorage.setItem("wild-pick",JSON.stringify(st))}catch(e){}
   }
   $$(".plan").forEach(function(b){b.addEventListener("click",function(){st.plan=b.dataset.plan;render()})});
@@ -810,7 +810,7 @@ footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--l
 
   var toast=$("#toast"),tt;
   function showToast(){toast.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("show")},2400)}
-  $("#copy").addEventListener("click",function(){
+  $("#btn-copy").addEventListener("click",function(){
     var t=$("#reply").dataset.text;
     function fallback(){var ta=document.createElement("textarea");ta.value=t;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy")}catch(e){}document.body.removeChild(ta);showToast()}
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(showToast,fallback)}else{fallback()}
