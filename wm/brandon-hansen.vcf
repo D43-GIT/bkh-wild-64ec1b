@@ -2,7 +2,8 @@ BEGIN:VCARD
 VERSION:3.0
 N:Hansen;Brandon;;;
 FN:Brandon Hansen
+ORG:Aurian Haus
 TEL;TYPE=CELL:+61400357305
-EMAIL;TYPE=INTERNET:brandon@bkhmediaagency.com
+EMAIL;TYPE=INTERNET:hello@aurianhaus.com
 NOTE:Wild Modular video
 END:VCARD
